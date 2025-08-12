@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Playwrite+AU+QLD:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
 
 * {
   margin: 0;
@@ -10,25 +12,30 @@
 body {
   background-color: darkkhaki;
   font-family: "Lobster", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+section {
+  height: 100vh;
+  background: #f6f7fb;
+  width: 100%;
+  padding-top: 100px;
+
 }
 
 .app {
   max-width: 600px;
   margin: 40px;
- background-color: papayawhip;
+  background-color: papayawhip;
   padding: 20px;
- box-shadow: 0 10px 30px darkorange;
-border-radius: 20px;
+  box-shadow: 0 10px 30px darkorange;
+  border-radius: 20px;
 }
 
 h1 {
   font-size: 28px;
   margin-bottom: 16px;
   font-family: "Lobster", sans-serif;
-  color:hotpink;
+  color: hotpink;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829);
 }

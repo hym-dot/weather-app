@@ -3,6 +3,7 @@ import WeatherCard from './components/WeatherCard'
 import { useState, useRef, useEffect } from 'react'
 import { fetchCoordinates } from './api/geo'
 import { fetchWeatherByCoords } from './api/weather'
+import { getColorByWeatherId } from './api/bgColor'
 
 function App() {
 
@@ -43,27 +44,32 @@ function App() {
   const onKeyup = (e) => {
     if (e.key === 'Enter') handleSearch()
   }
+  const bg = weather?.weather?.[0]?.id
+    ? getColorByWeatherId(weather.weather[0].id)
+    : 'linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%)';
 
   return (
-    <div className='app'>
-      <h1>Yumin's Weather APP</h1>
-      <div className="input-wrap">
-        <input
-          ref={inputRef}
-          value={city}
-          onChange={onChangeInput}
-          onKeyUp={onKeyup}
-          type="text"
-          placeholder='Please enter the city name.' />
-        <button onClick={handleSearch} disabled={loading}>
-          {loading ? "search..." : "search"}
-        </button>
-      </div>
-      {err && <p className='error'>{err}</p>}
-      {loading && <p className='info'>Loading...</p>}
-      <WeatherCard weather={weather} />
-    </div>
+    <section style={{ background: bg, minHeight: '100vh', transition: 'background .3s ease' }}>
+      <div className='app'>
+        <h1>Yumin's Weather APP</h1>
+        <div className="input-wrap">
+          <input
+            ref={inputRef}
+            value={city}
+            onChange={onChangeInput}
+            onKeyUp={onKeyup}
+            type="text"
+            placeholder='Please enter the city name.' />
+          <button onClick={handleSearch} disabled={loading}>
+            {loading ? "search..." : "search"}
+          </button>
+        </div>
+        {err && <p className='error'>{err}</p>}
+        {loading && <p className='info'>Loading...</p>}
+        <WeatherCard weather={weather} />
 
+      </div>
+    </section>
   )
 }
 
