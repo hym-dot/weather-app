@@ -1,0 +1,56 @@
+.card {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.card h2 {
+    margin: 30px 0 10px;
+    color: rgb(143, 173, 91);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.img-wrap {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border-radius: 50%;
+    box-shadow: inset -4px 0px 4px rgb(0, 0, 0);
+}
+
+.img-wrap img {
+    pointer-events: none;
+}
+
+.img-wrap:hover {
+    background-color: rgba(0, 0, 0, 0.753);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.card p {
+    margin: 6px 0;
+    color: black;
+    font-weight: bold;
+}
+
+.card p:nth-of-type(1) {
+    font-size: 30px;
+    color: rgb(1, 226, 226);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.card p:nth-of-type(2) {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.card p:nth-of-type(3) {
+    font-weight: 600;
+}

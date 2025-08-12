@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkkhaki;
+  font-family: "Lobster", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  max-width: 600px;
+  margin: 40px;
+ background-color: papayawhip;
+  padding: 20px;
+ box-shadow: 0 10px 30px darkorange;
+border-radius: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-family: "Lobster", sans-serif;
+  color:hotpink;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829);
+}
+
+.input-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.input-wrap input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 3px dashed pink;
+  font-family: 'Playwrite AU QLD', serif;
+}
+
+.input-wrap input:focus {
+  outline: none;
+}
+
+.input-wrap button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 4px groove pink;
+  background-color: palevioletred;
+  font-size: 16px;
+  font-family: 'Playwrite AU QLD', serif;
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.63);
+  transition: all 0.2s ease;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.input-wrap button:active {
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.6);
+  transform: scale(0.98);
+}
+
+.input-wrap button:hover {
+  background-color: salmon;
+  transition: all 0.8s ease;
+}
+
+.input-wrap button[disabled] {
+  opacity: 6;
+  cursor: not-allowed;
+}
